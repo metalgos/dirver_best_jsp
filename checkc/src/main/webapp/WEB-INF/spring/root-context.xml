@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd
+   http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd"
+   xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		<!--db연결을 위한 api(hikariCP)
+		커넥션풀 이용api  -->
+		<!-- 히카리 CP 빈 등록 -->
+		<!-- bean : 객체를 만드는 태그 -->
+		<!--mysql 라이브러리 5버전 이상에는 rul뒤에 다른 설정을 해줘야 한다.  -->
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="jdbcUrl"
+			value="jdbc:mysql://project-db-stu.ddns.net:3307/checkC?useSSL=false&amp;serverTimezone=UTC"/>
+			<property name="username" value="checkC"></property>
+			<property name="password" value="check1234"></property>
+	</bean>	
+
+	<!-- 히카리 CP 설정 -->
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
+		destroy-method="close">
+		<constructor-arg ref="hikariConfig"/>
+		</bean>
+		
+	
+	<!--BoardMapper(interface)의 구현 클래스 생성 
+	SqlSesstionFactoryBen(sql문을 실행하는API)
+	 -->
+	 <bean class ="org.mybatis.spring.SqlSessionFactoryBean">
+	     <property name = "dataSource" ref="dataSource"/>	     
+	     
+	 </bean>
+	 
+	 <!--어떤 매퍼가 일을 하느냐??? scan : Mapper interfae들을 메모리에 올리는 것  -->
+	 <!--mybartis로  DB를 이용하려면 mapper 패키지 안에서 맵퍼 표시해야함  -->
+	<!--  <mybatis-spring:scan base-package="kr.board.mapper"/> -->
+	  <mybatis-spring:scan base-package="com.member.mapper"/>
+	 
+	 <!-- 파일 업로드   -->
+	 <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <!--  파일업로드 용량 (10MB)-->
+    <property name="maxUploadSize" value="10485760"/>
+    <property name="defaultEncoding" value="UTF-8" />
+  </bean>
+  
+  <!--  파일업로드 디렉토리 설정 -->
+  <bean id="uploadPath" class="java.lang.String">
+    <constructor-arg value="checkupload"/>
+  </bean>
+  
+   
+	 
+</beans>

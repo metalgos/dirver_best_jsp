@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <!--여러가지 매퍼들이 있을수 있기 떄문에 네임스페이스에 어떤 매퍼인지 설정 , 내가 사용할 매퍼의 경로를 내임스페이스에 시정
+   -->
+<mapper namespace="kr.board.mapper.BoardMapper">
+  <select id="boardList" resultType="kr.board.entity.Board">
+    select * from Board order by idx desc
+  </select>
+  
+  <insert id="boardInsert" parameterType="kr.board.entity.Board">
+   insert into board (title,memId,content,writer)
+values(#{title},#{memId},#{content},#{writer})
+  </insert>
+  
+  
+  <select id="boardContent" parameterType="int" resultType="kr.board.entity.Board">
+    select * from Board where idx = #{idx}
+  </select>
+  
+  <update id="boardUpdate" parameterType="kr.board.entity.Board">
+    update board set title=#{title}, content=#{content} where idx=#{idx}
+  </update>
+  
+   <delete id="boardDelete" parameterType="int">
+    delete from board where idx=#{idx}
+  </delete>
+  
+   
+   
+  <select id="memberLogin" parameterType="kr.board.entity.Member" resultType="kr.board.entity.Member">
+    select * from member where memId =#{memId} and memPw=#{memPw}
+  </select>
+   
+   
+   
+</mapper>
