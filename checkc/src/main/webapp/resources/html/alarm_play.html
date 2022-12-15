@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="" />
+<meta name="author" content="" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+	rel="stylesheet" />
+<link href="../css/styles.css" rel="stylesheet" />
+<title>알림음</title>
+
+<!--페이지 3초뒤 이동 
+<meta http-equiv="refresh" content="3;url=http://localhost:8085/controller/memberLogin.do" /> 
+ -->
+
+<script>
+function sleep(ms) {
+    return new Promise((r) => setTimeout(r, ms));
+    console.log(`sleep for ${ms}ms`);
+}
+async function back(){
+	 await sleep(3000)
+     //history.go(-1); // 방법1
+     
+	//location.href="http://localhost:8085/controller/main";
+	 location.href="http://112.164.139.187:8085/controller/main";
+}
+</script>
+</head>
+
+<body onload="back()">
+	<!-- <iframe src="resources\mp3\silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+ -->
+
+		<video autoplay muted loop id="bg-video">
+			<source src="../video/gfp-astro-timelapse.mp4" type="video/mp4">
+		</video>
+
+		<div class="p-4 p-lg-5 rounded-3 text-center">
+			<div class="position-absolute top-50 start-50 translate-middle">
+			<p style="font-size: 3em">일어나세요!</p>
+				<audio id="audio"
+					autoplay controls>
+					<source src="../mp3/alarm_3.mp3">
+				</audio>
+			</div>
+		</div>
+	
+	
+	<!-- 스크립트 -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="../js/jquery-3.6.1.min.js"></script>
+	<script src="../js/scripts.js"></script>
+</body>
+
+</html>

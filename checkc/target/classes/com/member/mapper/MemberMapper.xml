@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.member.mapper.MemberMapper">
+ <insert id="memberInsert" parameterType="com.member.entity.Member">
+     insert into member(m_id, m_pw, m_name, m_car, m_address, m_tel, m_emergency) value(#{m_id}, #{m_pw}, #{m_name}, #{m_car}, #{m_address}, #{m_tel}, #{m_emergency})
+</insert>
+ 
+ 
+<select id="memberLogin" parameterType="com.member.entity.Member" resultType="com.member.entity.Member">
+    select * from member where m_id=#{m_id} and m_pw = #{m_pw}
+</select>
+
+
+<update id="memberUpdate" parameterType="com.member.entity.Member">
+    update member set m_pw=#{m_pw}, m_name=#{m_name}, m_car=#{m_car}, m_tel=#{m_tel}, m_address=#{m_address}, m_emergency=#{m_emergency} where m_no=#{m_no}
+</update>
+
+<select id="memberSelect" parameterType="int" resultType="com.member.entity.Member">
+	select * from member where m_no=#{m_no}
+</select>
+
+<update id="sleepyinsert" parameterType="int">
+   update member set m_sleep='sleep' where m_no=#{m_no}
+</update>
+   
+<update id="sleepydelete" parameterType="int">
+   update member set m_sleep='no' where m_no=#{m_no}
+</update>
+
+<select id="sleepyselect" parameterType="int" resultType="string">
+	select m_sleep from member where m_no=#{m_no}
+</select>
+
+
+
+<update id="theafinsert" parameterType="int">
+   update member set m_steal='theaf' where m_no=#{m_no}
+</update>
+   
+<update id="theafdelete" parameterType="int">
+   update member set m_steal='no' where m_no=#{m_no}
+</update>
+
+<select id="theafselect" parameterType="int" resultType="string">
+	select m_steal from member where m_no=#{m_no}
+</select>
+
+
+</mapper>
