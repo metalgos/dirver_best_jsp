@@ -260,9 +260,6 @@ $.ajax({
 
 //세션값 읽어오기
 function read_member(){
-//let m_no = ${loginMember.m_no}
-//let meberno = sessionStorage.getItem('oginMember.m_no');
-//var meberno= window.sessionStorage.getItem("loginuser") 
 meberno = document.getElementById('loginuser').value
 console.log("로그인 멤버 아이디 : " +meberno)
 

@@ -21,7 +21,7 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="resources/css/styles.css" rel="stylesheet" />
 <style>
-#preview{
+video{
 	transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg); /* Safari and Chrome */
 	-moz-transform: rotateY(180deg); /* Firefox */
