@@ -258,7 +258,7 @@ $.ajax({
 }
 
 
-//세션값 읽어오기
+//세션값 읽어오기, 로그인멤버
 function read_member(){
 meberno = document.getElementById('loginuser').value
 console.log("로그인 멤버 아이디 : " +meberno)
