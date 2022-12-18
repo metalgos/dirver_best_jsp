@@ -58,13 +58,8 @@ function startRecording(stream  ) {//녹화되는 스트림받아온다
     recorder.start(); // 녹화기 시작, 위의 녹화기가 시작됨.
 }
 function stopRecording()	  {
-    //previewPlayer.srcObject.getTracks().forEach(track => track.stop());  // 실시간 영상을 중단시킨다. 
-    //previewPlayer.srcObject.getTracks().forEach(track => track.start)//영상 blob로 저장후 다시 영상정보를 얻기위해 트랙 start
-    //녹화기 정지, 위에서 실시간 영상을 중지시킨후, 녹화기도 중지시킨다
     recorder.stop()
-    //recorder = null;    
-    //console.log(recordedChunks) // 저장되는 blob비디오 정보 표시  
-}
+   }
 function playRecording() { //기존의 녹화된영상을 웹에서 재생하는 기능 대신 영상을 인코딩에서 jsp로 보내는 역활을 함	
 	  videoBlob = new Blob(recordedChunks, { type: "mp4; codecs=h.264" });
 	    console.log(videoBlob)
