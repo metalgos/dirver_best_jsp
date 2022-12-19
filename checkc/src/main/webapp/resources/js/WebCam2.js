@@ -64,7 +64,7 @@ function playRecording() { //기존의 녹화된영상을 웹에서 재생하는
 	  videoBlob = new Blob(recordedChunks, { type: "mp4; codecs=h.264" });
 	    console.log(videoBlob)
 	   recordedVideoURL = window.URL.createObjectURL(videoBlob)
-	    //서버 호출 함수
+	    //서버 호출 함수 주소따라 다름
 	   	sendAvi(videoBlob);	   
 	    console.log("서버 전송 시작");
 
