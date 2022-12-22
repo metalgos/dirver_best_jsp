@@ -1,4 +1,4 @@
-//DOM
+//DOM 정보수정시 영상 업로드때 사용
 const recordButton = document.querySelector(".record-button");
 const stopButton = document.querySelector(".stop-button");
 const playButton = document.querySelector(".play-button");
