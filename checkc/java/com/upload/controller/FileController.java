@@ -24,7 +24,7 @@ import com.member.entity.Member;
 import com.member.mapper.MemberMapper;
 
 @Controller
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*") //스프링에서 CORS 적용하기
 @RequestMapping("/file")
 public class FileController {
 
