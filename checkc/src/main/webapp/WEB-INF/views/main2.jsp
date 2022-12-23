@@ -41,6 +41,7 @@
 			<source src="resources/video/gfp-astro-timelapse.mp4"
 				type="video/mp4">
 		</video>
+		
 		<div class="p-4 p-lg-5 rounded-3 text-center">
 			<div class="m-4 m-lg-5">
 				<video class="position-absolute top-50 start-50 translate-middle w-100 p-3" id="preview" autoplay
