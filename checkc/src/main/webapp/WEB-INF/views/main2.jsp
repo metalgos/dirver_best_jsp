@@ -30,6 +30,8 @@
 
 </head>
 <body>
+
+<!-- 도난방지용 페이지 -->
 	<!-- Responsive navbar-->
 	<%@include file="../../header.jsp"%>
 
