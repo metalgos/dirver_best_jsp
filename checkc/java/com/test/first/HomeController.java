@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-public class HomeController {
+public class HomeController { //uri 컨트롤러
 	
 	
 	
