@@ -29,6 +29,7 @@ video{
 </style>
 </head>
 <body>
+<!--졸음운전 판정 메인페이지  -->
 	<!-- Responsive navbar-->
 	<%@include file="../../header.jsp"%>
 
