@@ -33,7 +33,7 @@ video{
 	<!-- Responsive navbar-->
 	<%@include file="../../header.jsp"%>
 
-	<!--자바스클비트에서 세션값 가져오기위한 소스  -->
+	<!--자바스크립트 세션값 가져오기위한 소스   -->
 	<input type="hidden" value="${loginMember.m_no}" id="loginuser">
 	<!-- 카테고리-->
 	<section class="pt-4">
