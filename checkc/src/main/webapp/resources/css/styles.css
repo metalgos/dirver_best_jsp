@@ -12209,6 +12209,8 @@ textarea.form-control-lg {
   font-size: 2rem;
 }
 /* 배경 비디오 */
+
+/* 비디오 회전하기 */
 #bg-video {
     position: fixed;
     left: 50%;
