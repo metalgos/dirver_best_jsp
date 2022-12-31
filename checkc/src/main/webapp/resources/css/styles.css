@@ -12210,7 +12210,7 @@ textarea.form-control-lg {
 }
 /* 배경 비디오 */
 
-/* 비디오 회전하기 */
+/* 비디오 회전하기 좌우 */
 #bg-video {
     position: fixed;
     left: 50%;
