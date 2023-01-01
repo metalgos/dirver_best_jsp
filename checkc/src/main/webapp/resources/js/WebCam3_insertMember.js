@@ -272,9 +272,7 @@ var newfilename = title+dateString+timeString;
         success: function (data, textStatus) { //성공시 넘어온 데이터를 받는다.
             if (data != null) { //성공시 받아온 데이터가 있다면
                 console.log("동영상 서버 전송 성공");
-                //console.log(data) //서버에서 받아온 응답 데이터 출력
-                //setUsdaterResponse(data);  //데이터 처리
-                //send(a);
+            
             }
         },
         error: function (errorMessage) { //실패시 호출
@@ -291,9 +289,7 @@ var newfilename = title+dateString+timeString;
 
 
 function read_member(){
-	//let m_no = ${loginMember.m_no}
-	//let meberno = sessionStorage.getItem('oginMember.m_no');
-	//var meberno= window.sessionStorage.getItem("loginuser") 
+	
 	meberno = document.getElementById('loginuser').value
 	console.log("로그인 멤버 아이디 : " +meberno)
 
