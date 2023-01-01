@@ -172,7 +172,7 @@ let latitude = 0;
 let longitude = 0;
 let currntspeed = 0 ;
 
-function gpsloc() {
+function gpsloc() { //gps 측정기능, 나중에 활용 필요
     // Geolocation API에 액세스할 수 있는지를 확인
     if (navigator.geolocation) {
         //위치 정보를 얻기
