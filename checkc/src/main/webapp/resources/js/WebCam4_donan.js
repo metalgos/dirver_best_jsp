@@ -46,11 +46,11 @@ function videoready() { //카메라 녹화용 함수. 카메라 녹화를위해 
 function startRecording(stream  ) {//녹화되는 스트림받아온다
     recordedChunks = [];
     recorder = new MediaRecorder(stream); //녹화기를 호출하여 스트림을(실시간영상)을 파라미터로 넘기기 
-    //recorder = new MediaRecorder(stream,{mimeType: 'video/webm; codecs=vp9,opus'});
+ 
     recorder.ondataavailable = (event) => { 
         console.log("data recodedchunks push! ")
         recordedChunks.push(event.data) }
-    //recordedChunks.push(stream)
+ 
     recorder.start(); // 녹화기 시작, 위의 녹화기가 시작됨.
 }
 function stopRecording()	  {    
