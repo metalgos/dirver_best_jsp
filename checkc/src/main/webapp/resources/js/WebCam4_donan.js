@@ -77,7 +77,7 @@ function sleep(ms) {
 
 //자바스크립트 로딩 되자마자 실행
 window.onload = async function () { //비동기 위해 async 와 await 사용, 무한루프문 먹통현상 제거위해 사용
-    //실행할 내용
+   
 	videoStart()
 	
     while (true) {
