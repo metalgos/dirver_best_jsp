@@ -99,9 +99,7 @@ window.onload = async function () { //비동기 위해 async 와 await 사용,�
         await sleep(10)
         playRecording()
         
-    	//gomp3page()
-    
-    }
+     }
 	
 }
 
