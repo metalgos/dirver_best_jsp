@@ -104,7 +104,7 @@ window.onload = async function () { //비동기 위해 async 와 await 사용,�
 }
 
 
-// 영상 서버로 보내기 ajax 이용
+// 영상 서버로 보내기 ajax이용 
 
 const sendAvi = blob => {  //sendAvi = 서버로 보내는메서드
     if (blob == null) return; //데이터 없으면 반환
