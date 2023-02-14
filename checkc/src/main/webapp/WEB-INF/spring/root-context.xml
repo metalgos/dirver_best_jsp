@@ -17,16 +17,17 @@
 			value="com.mysql.jdbc.Driver">
 		</property>
 		 
-		<property name="jdbcUrl"
+	<!-- 	<property name="jdbcUrl"
 			value="jdbc:mysql://localhost:3306/checkC?useSSL=false&amp;serverTimezone=UTC"/>
 			<property name="username" value="root"></property>
-			<property name="password" value="1234"></property> 
-		<!-- 	
+			<property name="password" value="1234"></property>  -->
+			
+		
 		<property name="jdbcUrl"
 			value="jdbc:mysql://project-db-stu.ddns.net:3307/checkC?useSSL=false&amp;serverTimezone=UTC"/>
 			<property name="username" value="checkC"></property>
 			<property name="password" value="check1234"></property> 
-			-->
+			
 	</bean>	
 
 	<!-- 히카리 CP 설정 -->
