@@ -126,10 +126,10 @@
 </dependency>
 <!--mysql 연결  -->
 <dependency>
-          <groupId>mysql</groupId>
-          <artifactId>mysql-connector-java</artifactId>
-          <version>8.0.26</version>
-      </dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.26</version>
+		</dependency>
      <!-- 마이바티스 2개 --> 
       <dependency>
          <groupId>org.mybatis</groupId>
